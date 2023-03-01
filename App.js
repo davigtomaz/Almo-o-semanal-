@@ -14,8 +14,8 @@ export default function App() {
   ]
   return (
     <View style={styles.container}>
-      <Header />
-      <View>
+      <Header titulo="Lista" />
+      <View style={styles.FlatList}>
         <FlatList data={almoco} renderItem={({ item }) => <Text> {item.dia} | Principal: {item.principal} | Sobremesa: {item.sobremesa}</Text>} />
       </View>
     </View>
@@ -29,4 +29,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  FlatList: {
+    borderWidth: 3,
+    height: 100,
+    padding: 10
+  }
+
 });

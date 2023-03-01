@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
-export default class Header extends Component {
-    render() {
-      return (
-        <View style={styles.header}>
-          <Text style={styles.headerText}>Lista de Tarefas</Text>
-        </View>
-      );
-    }
-  }
+export default function header(props){
+  return (
+    <View style={styles.header}>
+      <Text style={styles.headerText}>{props.titulo}</Text>
+    </View>
+  )
+}
 
 const styles = StyleSheet.create({
     header: {
@@ -18,6 +16,7 @@ const styles = StyleSheet.create({
         width: '100%',
         alignContent: 'center',
         alignItems: 'center',
+        marginTop: 1
     },
     headerText: {
         color: 'white',
