@@ -4,20 +4,20 @@ import { FlatList, View } from "react-native";
 export default class ListaAlmoco extends Component{
     state = {
         almocos: [ 
-            {dia: 'segunda-feira', principal: 'Feijoada', sobremesa: 'morango'},
-            {dia: 'terça-feira', principal: 'strogonoff', sobremesa: 'melancia'},
-            {dia: 'quarta-feira', principal: 'Lasanha', sobremesa: 'laranja'},
-            {dia: 'quinta-feira', principal: 'fricasse ', sobremesa: 'iorgute'},
-            {dia: 'sexta-feira', principal: 'risoto', sobremesa: 'gelatina'},
+            {dia: 'segunda-feira', principal: 'Feijoada'},
+            {dia: 'terça-feira', principal: 'strogonoff'},
+            {dia: 'quarta-feira', principal: 'Lasanha'},
+            {dia: 'quinta-feira', principal: 'fricasse '},
+            {dia: 'sexta-feira', principal: 'risoto'},
         ],
     };
     render(){
         return (
             <View>
                 <FlatList 
-                 data={this.state.dia}
+                 data={this.state.almocos}
                  renderItem={
-                    ({ item }) => <ItemAlmoco dia={item}/>
+                    ({ item }) => <ItemAlmoco almocos={item}/>
                  }   />
             </View>
         )

@@ -1,26 +1,18 @@
-import React, { Component } from 'react';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { StyleSheet, View} from 'react-native';
 import Header from './scr/components/Header';
+import ListaAlmoco from './scr/components/ListaAlmoco';
 
 export default function App() {
-
-  const almoco = [
-    {dia: 'segunda-feira', principal: 'Feijoada', sobremesa: 'morango'},
-    {dia: 'terça-feira', principal: 'strogonoff', sobremesa: 'melancia'},
-    {dia: 'quarta-feira', principal: 'Lasanha', sobremesa: 'laranja'},
-    {dia: 'quinta-feira', principal: 'fricasse ', sobremesa: 'iorgute'},
-    {dia: 'sexta-feira', principal: 'risoto', sobremesa: 'gelatina'},
-
-  ]
   return (
     <View style={styles.container}>
-      <Header titulo="Lista" />
-      <View style={styles.FlatList}>
-        <FlatList data={almoco} renderItem={({ item }) => <Text> {item.dia} | Principal: {item.principal} | Sobremesa: {item.sobremesa}</Text>} />
-      </View>
+      <Header titulo="teste" />
+      <Header titulo="teste2" />
+      <Header titulo="teste3" />
+      <ListaAlmoco />
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -29,10 +21,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  FlatList: {
-    borderWidth: 3,
-    height: 100,
-    padding: 10
-  }
-
 });
