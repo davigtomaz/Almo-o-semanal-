@@ -1,14 +1,15 @@
 import { Component } from "react";
 import { FlatList, View } from "react-native";
+import ItemAlmoco from "./ItemAlmoco";
 
 export default class ListaAlmoco extends Component{
     state = {
         almocos: [ 
-            {dia: 'segunda-feira', principal: 'Feijoada'},
-            {dia: 'terça-feira', principal: 'strogonoff'},
-            {dia: 'quarta-feira', principal: 'Lasanha'},
-            {dia: 'quinta-feira', principal: 'fricasse '},
-            {dia: 'sexta-feira', principal: 'risoto'},
+            {dia: 'Segunda-feira', principal: 'Feijoada', sobremesa: 'Pudim'},
+            {dia: 'Terça-feira', principal: 'strogonoff', sobremesa: 'Maçã' },
+            {dia: 'Quarta-feira', principal: 'Lasanha', sobremesa: 'Laranja' },
+            {dia: 'Quinta-feira', principal: 'fricasse ', sobremesa: 'Melancia'},
+            {dia: 'Sexta-feira', principal: 'risoto' , sobremesa: 'Arroz Doce' },
         ],
     };
     render(){

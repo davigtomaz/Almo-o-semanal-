@@ -2,7 +2,7 @@ import { Text, View, StyleSheet } from "react-native";
 export default function ItemAlmoco(props){
     return (
         <View style={styles.item}>
-            <Text style={styles.texto}>{props.almocos.dia} ({props.almocos.principal})</Text>
+            <Text style={styles.texto}>{props.almocos.dia}: Principal: {props.almocos.principal}; Sobremesa: {props.almocos.sobremesa}. </Text>
            
         </View>
     );
@@ -10,14 +10,18 @@ export default function ItemAlmoco(props){
 
 const styles = StyleSheet.create({
     item: {
-        backgroundColor: 'blue',
+        backgroundColor: 'white',
         padding: 10,
         width: '100%',
         alignContent: 'center',
         alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 5,
+        borderWidth: 5,
     },
     texto: {
-        color: 'white',
+        color: 'black',
+        padding: 10,
     }
 
 });
